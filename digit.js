@@ -1,9 +1,9 @@
 class Digit {
-  constructor(x, y) {
+  constructor(x, y, num) {
     this.pos = createVector(x, y);
     this.vehicles = [];
 
-    let points = font.textToPoints('8', this.pos.x, this.pos.y, TEXTSIZE, {
+    let points = font.textToPoints(`${num}`, this.pos.x, this.pos.y, TEXTSIZE, {
       sampleFactor: 0.4,
     });
     for (let i = 0; i < points.length; i++) {

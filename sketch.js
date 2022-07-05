@@ -5,7 +5,7 @@ function preload() {
 // 224
 
 let time = '88:88:88'.split('');
-let prevTime = '88888888'.split('');
+let prevTime = time;
 let vehicles = [];
 const TEXTSIZE = 150;
 
@@ -30,7 +30,7 @@ function setup() {
 
   let start = width / 2 - textWidth('88:88:88') / 2;
   for (let i = 0; i < time.length; i++) {
-    digits.push(new Digit(start, height / 2));
+    digits.push(new Digit(start, height / 2, time[i]));
     start += textWidth(time[i]);
   }
 
